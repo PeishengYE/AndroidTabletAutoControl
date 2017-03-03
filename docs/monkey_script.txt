@@ -1,0 +1,16 @@
+# Start of Script
+type= user
+count= 49
+speed= 1.0
+start data >>
+LaunchActivity(com.mpowerlabs.coin.android, com.mpowerlabs.coin.android.LoginActivity)
+DispatchPress(KEYCODE_3)
+UserWait(200)
+DispatchPress(KEYCODE_1)
+UserWait(200)
+DispatchPress(KEYCODE_3)
+UserWait(200)
+DispatchPress(KEYCODE_5)
+UserWait(200)
+DispatchPress(KEYCODE_0)
+UserWait(200)

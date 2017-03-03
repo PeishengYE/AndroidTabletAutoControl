@@ -1,0 +1,8 @@
+
+service call statusbar 1
+service call statusbar 2
+
+monkey -f /mnt/sdcard/monkey_script.txt 1
+
+/* trying to unlock screen */
+input touchscreen swipe 1393 595 2000 592

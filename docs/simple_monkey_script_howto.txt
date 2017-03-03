@@ -1,0 +1,60 @@
+
+Monkey Script
+The Monkey is a command-line tool that that you can run on any emulator instance or on a device. It sends  of user events into the Android device(Android mobile), which acts as a on the application software you are developing.Monkey Script is used to control Android device(Android mobile) . It is used to do:
+Regression testing:
+Application testing:
+Functional testing
+Stress test:
+
+How to start Testing using Monkey Script:
+Write Monkey Script:
+Push those file into Android device
+Using command line execute Monkey script
+Write a Monkey Script:
+# Start of Script
+type= user
+count= 49
+speed= 1.0
+start data >>
+LaunchActivity(com.mpowerlabs.coin.android, com.mpowerlabs.coin.android.LoginActivity)
+DispatchPress(KEYCODE_3)
+UserWait(200)
+DispatchPress(KEYCODE_1)
+UserWait(200)
+DispatchPress(KEYCODE_3)
+UserWait(200)
+DispatchPress(KEYCODE_5)
+UserWait(200)
+DispatchPress(KEYCODE_0)
+UserWait(200)
+
+Above code is general format for monkey script:
+Now we will going little depth:
+ # Start of Script
+type= user
+count= 49
+speed= 1.0
+start data >>
+Here # is start for comment
+we will always be same for all Monkey script.
+speed is used to control execution speed.
+
+LaunchActivity(com.mpowerlabs.coin.android, com.mpowerlabs.coin.android.LoginActivity)
+  here LaunchActivity(string,string)
+is activity name of application, which you want to start. This activity name can be easily found using Hierarchy Viewer. Which is present is Android SDK (tools directory).
+
+Some of Methods to perform task on mobile: 
+DispatchPointer(long downTime,  long eventTime, int action,float x, float y, float pressure, float size, int metaState,float xPrecision, float yPrecision, int device, int edgeFlags) 
+DispatchTrackball same as DispatchPointer 
+DispatchKey(long downTime, long eventTime, int action, int code,int repeat, int metaState, int device, int scancode) 
+DispatchFlip(boolean keyboardOpen) 
+DispatchPress(int keyCode) 
+Tap(int x,int y) 
+LaunchActivity(String pkg_name, String cl_name) 
+UserWait(long sleeptime) 
+LongPress(long sleeptime)
+ DispatchPointer:  This is used to perform task such as Dragging, tapping, clicking, even entering   
+                               alphabet in target.
+DispatchTrackball: same as DispatchPointer
+Tap:  This is used tap Android Device.ex any icon, application etc. in given coordinate.
+
